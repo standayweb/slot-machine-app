@@ -1,0 +1,143 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: #eae7dd;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.App {
+  width: 100%;
+  max-width: 632px;
+  padding: 72px 16px;
+  margin: 0 auto;
+}
+
+.Intro h1 {
+  font-weight: 600;
+  font-size: 34px;
+  letter-spacing: 0.35px;
+  color: #e85a4f;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.Intro p {
+  font-size: 17px;
+  color: #8e8d8a;
+  letter-spacing: -0.15px;
+  line-height: 1.7;
+  max-width: 432px;
+  margin-bottom: 72px;
+}
+
+.SlotMachine {
+  position: relative;
+}
+
+.SlotMachine__main {
+  display: flex;
+  width: 516px;
+  height: 258px;
+  background: #fff;
+  padding: 28px 21px;
+  z-index: 100;
+  position: relative;
+  border-bottom: 2px solid #eae7dd;
+}
+
+.SlotMachineLever {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.SlotMachineWheel {
+  position: relative;
+  width: 144px;
+  height: 202px;
+  overflow: hidden;
+  margin: 0 7px;
+}
+
+.SlotMachineWheel__inner {
+  position: absolute;
+  top: -432px;
+}
+
+.SlotMachineWheel__part {
+  position: absolute;
+  left: 0;
+  width: 144px;
+  height: 144px;
+}
+
+.SlotMachineWheel__part--red {
+  background: #fdb4bb;
+}
+
+.SlotMachineWheel__part--blue {
+  background: #bbe1fe;
+}
+
+.SlotMachineWheel__part--green {
+  background: #bcfecb;
+}
+
+.SlotMachineWheel__part--yellow {
+  background: #f3f2a3;
+}
+
+.SlotMachineList {
+  background: #ffffff;
+  width: 516px;
+}
+
+.SlotMachineList__item {
+  padding: 0 28px;
+  font-weight: 600;
+  font-size: 24px;
+  color: #d8c3a5;
+  letter-spacing: 0.28px;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  border-bottom: 2px solid #eae7dd;
+  overflow: hidden;
+  position: relative;
+}
+
+.SlotMachineList__item img {
+  margin-right: 24px;
+  width: 42px;
+  height: 42px;
+}
+
+.SlotMachineList__item--win {
+  background: #e98074;
+  color: #eae7dd;
+}
+
+.SlotMachineList__item__matches {
+  margin-left: auto;
+  font-weight: normal;
+}
+
+.GithubLink {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

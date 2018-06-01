@@ -1,21 +1,25 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import PropTypes from 'prop-types';
+import Intro from './Intro';
+import GithubLink from './GithubLink';
+import SlotMachine from './SlotMachine';
 
-class App extends Component {
+class App extends React.PureComponent {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Intro
+          heading="Slot Machine App"
+          paragraph="Welcome to my solution for the Slot Machine app, below you can try
+            your luck at my slot machine. For this task, I used React and Redux!"
+        />
+        <SlotMachine />
+        <GithubLink url="https://github.com/standayweb/slot-machine-app" />
       </div>
     );
   }
 }
+
+App.propTypes = {};
 
 export default App;
