@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '../App';
+import SlotMachineWheel from '../SlotMachineWheel';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  ReactDOM.render(<SlotMachineWheel spinning={false} color="green" />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

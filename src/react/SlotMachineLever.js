@@ -3,17 +3,22 @@ import PropTypes from 'prop-types';
 
 class SlotMachineLever extends React.PureComponent {
   render() {
+    const { down, pull } = this.props;
     return (
       <img
         className="SlotMachineLever"
         src="/img/lever.svg"
-        style={{ transform: 'rotate(21deg)' }}
         alt=""
+        onClick={pull}
+        style={{ transform: down ? 'rotate(40deg)' : 'rotate(21deg)' }}
       />
     );
   }
 }
 
-SlotMachineLever.propTypes = {};
+SlotMachineLever.propTypes = {
+  down: PropTypes.bool.isRequired,
+  pull: PropTypes.func,
+};
 
 export default SlotMachineLever;
