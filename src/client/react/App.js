@@ -17,7 +17,7 @@ class App extends React.PureComponent {
             your luck at my slot machine. For this task, I used React and Redux!"
         />
         <SlotMachine colors={colors} spins={spins} spin={spin} />
-        <GithubLink url="https://github.com/standayweb/slot-machine-app" />
+        <GithubLink url="https://bitbucket.org/whenyoumove/standay/src/master/" />
       </div>
     );
   }
