@@ -1,4 +1,5 @@
 import React from 'react';
+import { Spring, animated, interpolate } from 'react-spring';
 import PropTypes from 'prop-types';
 import { wrap } from '../lib/util';
 
@@ -57,42 +58,51 @@ class SlotMachineWheel extends React.PureComponent {
 
   render() {
     return (
-      <div className="SlotMachineWheel">
-        <div
-          className="SlotMachineWheel__inner"
-          style={{
-            transform: `translate3d(0px, ${wrap(
-              this.state.offset,
-              squares(4),
-            )}px, 0px)`,
-          }}
-        >
-          <div
-            style={{ top: -squares(1) }}
-            className="SlotMachineWheel__part SlotMachineWheel__part--yellow"
-          />
-          <div
-            style={{ top: squares(0) }}
-            className="SlotMachineWheel__part SlotMachineWheel__part--red"
-          />
-          <div
-            style={{ top: squares(1) }}
-            className="SlotMachineWheel__part SlotMachineWheel__part--blue"
-          />
-          <div
-            style={{ top: squares(2) }}
-            className="SlotMachineWheel__part SlotMachineWheel__part--green"
-          />
-          <div
-            style={{ top: squares(3) }}
-            className="SlotMachineWheel__part SlotMachineWheel__part--yellow"
-          />
-          <div
-            style={{ top: squares(4) }}
-            className="SlotMachineWheel__part SlotMachineWheel__part--red"
-          />
-        </div>
-      </div>
+      <Spring
+        native
+        to={{ offset: this.state.offset }}
+        config={{ tension: 75, friction: 50 }}
+      >
+        {styles => (
+          <div className="SlotMachineWheel">
+            <animated.div
+              className="SlotMachineWheel__inner"
+              style={{
+                transform: interpolate(
+                  [styles.offset],
+                  offset =>
+                    `translate3d(0px, ${wrap(offset, squares(4))}px, 0px)`,
+                ),
+              }}
+            >
+              <div
+                style={{ top: -squares(1) }}
+                className="SlotMachineWheel__part SlotMachineWheel__part--yellow"
+              />
+              <div
+                style={{ top: squares(0) }}
+                className="SlotMachineWheel__part SlotMachineWheel__part--red"
+              />
+              <div
+                style={{ top: squares(1) }}
+                className="SlotMachineWheel__part SlotMachineWheel__part--blue"
+              />
+              <div
+                style={{ top: squares(2) }}
+                className="SlotMachineWheel__part SlotMachineWheel__part--green"
+              />
+              <div
+                style={{ top: squares(3) }}
+                className="SlotMachineWheel__part SlotMachineWheel__part--yellow"
+              />
+              <div
+                style={{ top: squares(4) }}
+                className="SlotMachineWheel__part SlotMachineWheel__part--red"
+              />
+            </animated.div>
+          </div>
+        )}
+      </Spring>
     );
   }
 }
