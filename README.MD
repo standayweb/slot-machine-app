@@ -2,6 +2,8 @@
 
 Welcome to my solution for the Slot Machine app, I used React and Redux!
 
+You can check out the app running live at: http://206.189.24.145/
+
 ## Instructions for running in dev mode
 
 1.  Clone the repo
