@@ -9,7 +9,7 @@ You can check out the app running live at: http://206.189.24.145/
 1.  Clone the repo
 
 ```
-git clone https://stanleyday@bitbucket.org/whenyoumove/standay.git
+git clone https://github.com/standayweb/slot-machine-app.git
 ```
 
 2.  Install dependencies
@@ -35,7 +35,7 @@ npm start
 1.  Clone the repo
 
 ```
-git clone https://stanleyday@bitbucket.org/whenyoumove/standay.git
+git clone https://github.com/standayweb/slot-machine-app.git
 ```
 
 2.  Install dependencies
